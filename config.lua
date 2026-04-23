@@ -113,6 +113,28 @@ Config.Departments = {
         },
         webhook = '',
     },
+
+    -- =====================================================================
+    -- DEPARTMENT TEMPLATE
+    -- Copy this block, uncomment it, and rename the key ('deptkey') to add
+    -- a new department. Fill in the fields that apply to your setup.
+    -- =====================================================================
+    --[[
+    ['deptkey'] = {
+        label        = 'Full Department Name',       -- shown in notifications/logs
+        short        = 'TAG',                        -- short tag shown on roster/blips
+        acePerms     = { 'deptstatus.deptkey' },     -- used when PermissionBackend = 'discordaceperms'
+        discordRoles = { '000000000000000000' },     -- used when PermissionBackend = 'badgerdiscordapi'
+        blip = {
+            sprite     = 60,        -- blip sprite ID
+            color      = 0,         -- blip color ID
+            scale      = 0.9,       -- blip scale
+            display    = 4,         -- 4 = show on map + minimap
+            shortRange = false,     -- true = only show when nearby
+        },
+        webhook = '', -- leave blank to fall back to Config.DefaultWebhook
+    },
+    --]]
 }
 
 -- =====================================================================
